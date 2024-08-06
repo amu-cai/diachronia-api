@@ -1,4 +1,8 @@
+from dariah.models import dating
+
+
 def main():
+    print(dating("bogurodzica"))
     pass
 
 

@@ -18,6 +18,7 @@ requests = "^2.32.3"
 black = "^24.4.2"
 flake8 = "^7.0.0"
 isort = "^5.13.2"
+mypy = "^1.11.1"
 
 
 
@@ -38,3 +39,7 @@ use_parentheses = true
 ensure_newline_before_comments = true
 line_length = 120
 skip_glob = ["*/venv/*", "*/.venv/*", "*/.tox/*", "*/.nox/*", "*/.eggs/*", "*/.git/*", "*/.mypy_cache/*", "*/.pytest_cache/*", "*/.vscode/*", "*/__pycache__/*", "*/.mypy/*", "*/.pytest"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
