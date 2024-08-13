@@ -1,3 +1,5 @@
+import json
+import logging
 from enum import Enum
 from functools import partial
 
@@ -12,9 +14,43 @@ class Endpoints(Enum):
 
 
 def create_function(name: str):
-    func = partial(__call_dariah_model_service, str(Endpoints[name].value))
+    func = partial(
+        __call_dariah_model_service, url=str(Endpoints[name].value), respone_parser=get_response_parser(name)
+    )
     func.__doc__ = f"Call DARIAH model service for {name}"
     return func
+
+
+class SynonymsDariahJSONDecoder(json.JSONDecoder):
+    def decode(self, data, **kwargs):
+        try:
+            data = data.strip().split("\t")
+            data = [result.split("\n") for result in data]
+            data = [{result[0]: result[1:][0].split(", ")} for result in data]
+            return data
+        except json.JSONDecodeError as e:
+            logging.error(f"Invalid JSON received {e}")
+            return None
+
+
+class UniversalDariahJSONDecoder(json.JSONDecoder):
+    def decode(self, data, **kwargs):
+        try:
+            data = str(data).replace("/", "-")
+            return data
+        except json.JSONDecodeError as e:
+            logging.error(f"Invalid JSON received {e}")
+            return None
+
+
+def get_response_parser(name: str):
+    match name:
+        case "dating":
+            return
+        case "synonyms":
+            return SynonymsDariahJSONDecoder
+        case _:
+            return UniversalDariahJSONDecoder
 
 
 globals().update({name: create_function(name) for name in Endpoints.__members__})

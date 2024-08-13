@@ -1,4 +1,5 @@
 import logging
+from typing import Any
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -6,7 +7,10 @@ from requests.exceptions import HTTPError
 from urllib3.util.retry import Retry
 
 
-def __call_dariah_model_service(url: str, input_text: str) -> dict | None:
+def __call_dariah_model_service(
+    input_text: str, url: str, respone_parser: Any
+) -> dict | None:  # TODO add proper typing
+
     session = requests.Session()
 
     retries = Retry(
@@ -18,8 +22,9 @@ def __call_dariah_model_service(url: str, input_text: str) -> dict | None:
     session.mount("http://", adapter)
     session.mount("https://", adapter)
     try:
-        response = session.post(f"{url}", json={"text": input_text})
-        return response.json()
+        response = session.post(url, json={"text": input_text})
+
+        return response.json(cls=respone_parser)
     except HTTPError as e:
         logging.error(f"HTTP error occurred: {e}")
     except requests.exceptions.RequestException as e:
