@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dariah"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = ["Filip Patyk <fp.patyk@gmail.com>"]
 readme = "README.md"
