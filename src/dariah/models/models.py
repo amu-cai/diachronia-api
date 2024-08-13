@@ -36,7 +36,7 @@ class SynonymsDariahJSONDecoder(json.JSONDecoder):
 class UniversalDariahJSONDecoder(json.JSONDecoder):
     def decode(self, data, **kwargs):
         try:
-            data = str(data).replace("/", "-")
+            data = str(data).replace("/", r"\/")
             return data
         except json.JSONDecodeError as e:
             logging.error(f"Invalid JSON received {e}")
