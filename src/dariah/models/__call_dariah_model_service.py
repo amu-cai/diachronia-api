@@ -7,9 +7,7 @@ from requests.exceptions import HTTPError
 from urllib3.util.retry import Retry
 
 
-def __call_dariah_model_service(
-    input_text: str, url: str, respone_parser: Any
-) -> dict | None:  # TODO add proper typing
+def __call_dariah_model_service(input_text: str, url: str, respone_parser: Any) -> Any:
 
     session = requests.Session()
 

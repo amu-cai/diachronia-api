@@ -30,7 +30,7 @@ class SynonymsDariahJSONDecoder(json.JSONDecoder):
             return data
         except json.JSONDecodeError as e:
             logging.error(f"Invalid JSON received {e}")
-            return None
+            return
 
 
 class UniversalDariahJSONDecoder(json.JSONDecoder):
@@ -40,7 +40,7 @@ class UniversalDariahJSONDecoder(json.JSONDecoder):
             return data
         except json.JSONDecodeError as e:
             logging.error(f"Invalid JSON received {e}")
-            return None
+            return
 
 
 def get_response_parser(name: str):
