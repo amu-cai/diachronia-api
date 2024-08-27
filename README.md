@@ -32,6 +32,7 @@ Example:
 >> python -m dariah dating bogurodzica
 2012.0
 ``` 
+The argument `--file` `-f`, can be used to read the text from a file.
 The argument `--output` `-o`, can be used to save the output to a given file.
 
 
