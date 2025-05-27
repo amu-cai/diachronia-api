@@ -100,7 +100,7 @@ The inflectional generator was a custom, unpublished finite-state transducer-bas
 
 ## Credits
 
-All credit goes to Filip Patyk (@drfifonz) for implementing the API.
+All credit goes to Filip Patyk [drfifonz](https://github.com/drfifonz) for implementing the API.
 
 The diachronic processing tools were developed at the [Faculty of Mathematics and Computer Science of Adam Mickiewicz University](https://wmi.amu.edu.pl/en) as part of the [Diachronia](https://csi.amu.edu.pl/en/projects/diachronia) research initiative situated within the [DARIAH-PL](https://dariah.pl/en/) consortium.
 
