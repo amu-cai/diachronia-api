@@ -67,10 +67,10 @@ The solution is based on a set of deterministic rules, initially handcrafted and
 
 For more information on the details of the solution, please refer to the following publications:
 
-- [Two Approaches to Diachronic Normalization of Polish Texts, Dudzic et al. (2024)](https://aclanthology.org/2024.latechclfl-1.19/)
-- [Automated Normalization and Analysis of Historical Texts, Skórzewski et al. (2020)](https://link.springer.com/chapter/10.1007/978-3-030-66527-2_6)
-- [Mining historical texts for diachronic spelling variants, Graliński and Jassem (2020)](https://www.degruyterbrill.com/document/doi/10.1515/psicl-2020-0021/html)
-- [Automatic Diachronic Normalization of Polish Texts, Jassem et al. (2018)](https://pressto.amu.edu.pl/index.php/il/article/view/13397)
+- [Two Approaches to Diachronic Normalization of Polish Text (Dudzic et al., 2024)](https://aclanthology.org/2024.latechclfl-1.19/)
+- [Automated Normalization and Analysis of Historical Texts (Skórzewski et al., 2020)](https://link.springer.com/chapter/10.1007/978-3-030-66527-2_6)
+- [Mining historical texts for diachronic spelling variants (Graliński and Jassem, 2020)](https://www.degruyterbrill.com/document/doi/10.1515/psicl-2020-0021/html)
+- [Automatic Diachronic Normalization of Polish Texts (Jassem et al., 2018)](https://pressto.amu.edu.pl/index.php/il/article/view/13397)
 
 ### Disambiguation
 
@@ -80,7 +80,7 @@ The solution is based on a custom graph neural network architecture set up for t
 
 For more information on the details of the solution, please refer to the following publication:
 
-- [Geometric Deep Learning Models for Linking Character Names in Novels, Kubis (2020)](https://aclanthology.org/2020.latechclfl-1.15/)
+- [Geometric Deep Learning Models for Linking Character Names in Novels (Kubis, 2020)](https://aclanthology.org/2020.latechclfl-1.15/)
 
 ### Synonyms
 
